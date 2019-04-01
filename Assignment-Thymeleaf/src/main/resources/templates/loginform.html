@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>Faraz Gulzar</title>
+
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+
+</head>
+
+<body>
+   <h1>Login</h1>
+    <form action="#" th:action="@{/login}" th:object="${loginVo}" method="post">
+    
+    <input type="email" th:field="*{loginId}" class="contact col-md-6" placeholder="E-mail address *" th:required="required"/>
+    <input type="password" th:field="*{password}" class="contact noMarr col-md-6" placeholder="password *" th:required="required"/>
+    <input type="submit" id="submit" class="contact submit" value="Send message"/>
+    </form>
+
+
+<script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+</body>
+</html>
